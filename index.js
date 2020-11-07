@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.post('/getTime', (req, res) => {
     var date = moment.tz(new Date(), req.body.timezone)
-    res.json({time: date.format('DD/MM, HH:mm')})
+    res.json({time: date.format('DD/MM, HH:mm:ss')})
 })
 
 app.listen(PORT, HOST)
